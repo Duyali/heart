@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Mr.Liu🧡</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <meta name="Author" content="" />
     <meta name="Keywords" content="" />
     <meta name="Description" content="" />
@@ -27,10 +28,17 @@
     
     <div style="height: 100%;width: 100%;margin: 0;padding: 0;">
       <canvas id="canvas" style=" height: 100%;width: 100%;margin: 0;padding: 0;display: block; " ></canvas>
-      <!-- <div class="name">Mr.Liu</div> -->
-      <div class="name">Mr.柳亚鑫</div>
+      <div class="name" id="typed-output"></div>
     </div>
     <script>
+      var options = {
+        strings: ["Mr.柳亚鑫","这是属于你的","独一无二的","生日礼物！"],
+        typeSpeed: 50,
+        backSpeed: 10,
+        loop: true
+      };
+
+      var typed = new Typed('#typed-output', options);
       const { clientWidth, clientHeight } = document.documentElement;
       let canvasEl = document.getElementById("canvas");
       let ctx = canvasEl.getContext("2d");
